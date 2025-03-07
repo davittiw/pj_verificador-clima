@@ -12,3 +12,6 @@ O verificador de clima é uma aplicação simples que permite aos usuários veri
 - A aplicação consulta uma API de clima e exibe informações como:
   - Temperatura atual
   - Condição do tempo (ex.: ensolarado, nublado, chuvoso)
+  - Nivel de umidade
+  
+ ## Futuras atualizações
