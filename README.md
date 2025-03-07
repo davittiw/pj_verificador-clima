@@ -1,4 +1,4 @@
-# verifica-clima
+# Verificador de clima local 
 
 O verificador de clima é uma aplicação simples que permite aos usuários verificar dados do clima da localização escrita pelo próprio cliente, consumiundo uma api para apresentar os resultados requeridos.
 
