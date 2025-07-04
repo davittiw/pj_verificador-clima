@@ -8,11 +8,11 @@ async function verifica() {
     const resultado = document.getElementById('resultado');
     
     if (!cidade) {
-        resultado.innerHTML = `<p style="color:red;">Por favor, digite uma cidade válida.</p>`;
+        resultado.innerHTML = `<p class="text-red-600 font-extrabold">Por favor, digite uma cidade válida!</p>`;
         return;
     }
 
-    resultado.innerHTML = `<p style="color:yellow;">Buscando informações...</p>`;
+    resultado.innerHTML = `<p class="text-sky-950">Buscando informações...</p>`;
 
     try {
         const response = await fetch(url);
@@ -24,14 +24,14 @@ async function verifica() {
         const data = await response.json();
 
         resultado.innerHTML = `
-        <div class="card">
-            <h3>${data.name}, ${data.sys.country}</h3>
+        <div class="card text-sky-950">
+            <h3 class="text-lg font-bold">${data.name}, ${data.sys.country}</h3>
             <p>Temperatura: ${data.main.temp}°C</p>
             <p>Clima: ${data.weather[0].description}</p>
             <p>Umidade: ${data.main.humidity}%</p>
         </div>
         `;
     } catch (error) {
-        resultado.innerHTML = `<p style="color:red;">Erro: ${error.message}</p>`;
+        resultado.innerHTML = `<p class="text-red-600 font-extrabold">Erro: ${error.message}</p>`;
     }
 }

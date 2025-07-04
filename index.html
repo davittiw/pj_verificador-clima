@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Verificador de Tempo</title>
   </head>
-  <body>
-    <header>
-    </header>
-    
-    <main>
-        <h1>Como está o tempo na sua localização?</h1>
-        <div class="entrada">
-            <input type="text" name="cidade" id="cidnome" placeholder="Nome da Cidade">
-            <button onclick="verifica()">Verificar Clima</button>
+  <body class="min-h-screen text-white flex flex-col justify-center items-center bg-blue-950 bg-no-repeat bg-cover bg-[url('./assets/download.jpg')]">
+
+    <main class="border border-white/20 bg-white/shadow-1g backdrop-filter backdrop-blur-xl flex flex-col items-center justify-center w-full max-w-md p-4 rounded-md">
+        <h1 class="text-2xl text-center font-bold">Como está o tempo na sua localização?</h1>
+
+        <div class="max-w-lg h-10 flex items-center justify-center gap-2 mt-4">
+            <input class="bg-blue-100 text-sky-950 p-2 w-3xs rounded-md border-red-400 focus:border-gray-300" 
+            type="text" name="cidade" id="cidnome" placeholder="Nome da Cidade">
+            <button class="border border-white backdrop-filter backdrop-blur-xs p-2 w-30 rounded-md cursor-pointer"
+            onclick="verifica()">Verificar</button>
         </div>
-        <div id="resultado"></div>
+
+        <div class="w-sm p-2 bg-blue-100 hidden rounded-md mt-3 text-center" id="resultado"></div>
     </main>
 
-    <footer>
-        <p>&copy davittiw</p>
-        <div class="redes">
-            <a href="https://github.com/davittiw" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/davttiw/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <footer class="mx-auto mt-10">
+        <div class="redes gap-2 flex">
+            <a class="text-3xl hover:text-sky-600" href="https://github.com/davittiw" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="text-3xl hover:text-sky-600" href="https://www.linkedin.com/in/davttiw/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
 
